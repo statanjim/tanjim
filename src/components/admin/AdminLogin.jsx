@@ -22,11 +22,6 @@ export default function AdminLogin({ auth, onClose }) {
     }, 400);
   };
 
-  const handleFillDemoCreds = () => {
-    setEmail('sarkartanjimahmed2011@gmail.com');
-    setPassword('@#porttanjimpro2011#@');
-  };
-
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in">
       <div className="w-full max-w-md glass-card rounded-3xl p-6 sm:p-8 border border-neutral-800 shadow-2xl relative">
@@ -68,9 +63,10 @@ export default function AdminLogin({ auth, onClose }) {
               <input
                 type="email"
                 required
+                autoComplete="off"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="sarkartanjimahmed2011@gmail.com"
+                placeholder="Enter admin email"
                 className="w-full pl-10 pr-4 py-3 rounded-xl bg-neutral-900 border border-neutral-800 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-purple-500 transition-colors font-mono"
               />
             </div>
@@ -85,6 +81,7 @@ export default function AdminLogin({ auth, onClose }) {
               <input
                 type={showPassword ? 'text' : 'password'}
                 required
+                autoComplete="new-password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••••••"
@@ -115,17 +112,6 @@ export default function AdminLogin({ auth, onClose }) {
             )}
           </button>
         </form>
-
-        {/* Quick Demo Credentials Helper */}
-        <div className="mt-6 pt-5 border-t border-neutral-800 text-center">
-          <button
-            type="button"
-            onClick={handleFillDemoCreds}
-            className="text-xs font-mono text-neutral-400 hover:text-purple-300 transition-colors underline decoration-dashed underline-offset-4"
-          >
-            Auto-fill default admin credentials
-          </button>
-        </div>
 
       </div>
     </div>
