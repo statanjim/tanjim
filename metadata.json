@@ -1,0 +1,6 @@
+{
+  "name": "Tanjim - Programmer Portfolio",
+  "description": "Programmer portfolio for Tanjim with a secret headless admin CMS, custom state store, and customizable sections.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
