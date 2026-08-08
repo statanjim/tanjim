@@ -173,7 +173,7 @@ export default function AdminLayout({ store, auth, onClose }) {
             </button>
 
             <div className="text-xs font-mono text-neutral-400 px-2.5 py-1 rounded-lg bg-neutral-900 border border-neutral-800">
-              Admin: {auth.creds?.email || 'Logged In'}
+              Admin: Logged In
             </div>
           </div>
         </header>
